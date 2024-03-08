@@ -5,26 +5,26 @@ import { ManageProductsComponent } from './manage-products/manage-products.compo
 import { EditProductComponent } from './edit-product/edit-product.component';
 
 const routes: Routes = [
-  {
-    path: 'orders',
-    component: OrdersComponent,
-  },
-  {
-    path: 'products',
-    component: ManageProductsComponent,
-  },
-  {
-    path: 'products/new',
-    component: EditProductComponent,
-  },
-  {
-    path: 'products/:productId',
-    component: EditProductComponent,
-  },
+	{
+		path: 'orders',
+		component: OrdersComponent,
+	},
+	{
+		path: 'products',
+		component: ManageProductsComponent,
+	},
+	{
+		path: 'products/new',
+		component: EditProductComponent,
+	},
+	{
+		path: 'products/:productId',
+		component: EditProductComponent,
+	},
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule],
 })
 export class AdminRoutingModule {}

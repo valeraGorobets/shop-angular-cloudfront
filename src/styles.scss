@@ -2,7 +2,7 @@
 
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 @import "bootstrap/scss/bootstrap-reboot";
@@ -13,21 +13,21 @@ body {
 @import "bootstrap/scss/type";
 
 body {
-  overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 .mat-icon-button {
-  // Fix vertical alignment for Firefox
-  line-height: 1 !important;
+	// Fix vertical alignment for Firefox
+	line-height: 1 !important;
 }
 
 // snackbar styles
 .shop-snackbar-error {
-  background-color: #ff0015;
-  color: white;
+	background-color: #ff0015;
+	color: white;
 
-  button {
-    color: white;
-    border: 1px solid;
-  }
+	button {
+		color: white;
+		border: 1px solid;
+	}
 }

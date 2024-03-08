@@ -4,9 +4,9 @@ import { Order } from './order.interface';
 
 @Injectable()
 export class OrdersService {
-  constructor() {}
+	constructor() {}
 
-  getOrders(): Observable<Order[]> {
-    return of([]);
-  }
+	getOrders(): Observable<Order[]> {
+		return of([]);
+	}
 }

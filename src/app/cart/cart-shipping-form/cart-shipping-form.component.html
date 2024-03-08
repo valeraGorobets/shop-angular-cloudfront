@@ -1,66 +1,70 @@
 <form (ngSubmit)="nextStep.emit()" [formGroup]="shippingInfo">
-  <div class="row">
-    <div class="col col-md-6">
-      <mat-form-field class="w-100">
-        <input
-          formControlName="firstName"
-          name="firstName"
-          placeholder="First name"
-          type="text"
-          matInput
-          required
-        />
+	<div class="row">
+		<div class="col col-md-6">
+			<mat-form-field class="w-100">
+				<input
+					formControlName="firstName"
+					matInput
+					name="firstName"
+					placeholder="First name"
+					required
+					type="text"
+				/>
 
-        <mat-error *ngIf="shippingInfo.getError('required', 'firstName')">
-          First name is required!
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col col-md-6">
-      <mat-form-field class="w-100">
-        <input
-          formControlName="lastName"
-          name="lastName"
-          placeholder="Last name"
-          type="text"
-          matInput
-          required
-        />
+				<mat-error
+					*ngIf="shippingInfo.getError('required', 'firstName')"
+				>
+					First name is required!
+				</mat-error>
+			</mat-form-field>
+		</div>
+		<div class="col col-md-6">
+			<mat-form-field class="w-100">
+				<input
+					formControlName="lastName"
+					matInput
+					name="lastName"
+					placeholder="Last name"
+					required
+					type="text"
+				/>
 
-        <mat-error *ngIf="shippingInfo.getError('required', 'lastName')">
-          Last name is required!
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-12">
-      <mat-form-field class="w-100">
-        <input
-          formControlName="address"
-          name="address"
-          placeholder="Shipping address"
-          type="text"
-          matInput
-          required
-        />
+				<mat-error
+					*ngIf="shippingInfo.getError('required', 'lastName')"
+				>
+					Last name is required!
+				</mat-error>
+			</mat-form-field>
+		</div>
+		<div class="col-12">
+			<mat-form-field class="w-100">
+				<input
+					formControlName="address"
+					matInput
+					name="address"
+					placeholder="Shipping address"
+					required
+					type="text"
+				/>
 
-        <mat-error *ngIf="shippingInfo.getError('required', 'address')">
-          Shipping address is required!
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-12">
-      <mat-form-field class="w-100">
-        <input
-          formControlName="comment"
-          name="comment"
-          placeholder="Comment"
-          type="text"
-          matInput
-        />
-      </mat-form-field>
-    </div>
-  </div>
+				<mat-error *ngIf="shippingInfo.getError('required', 'address')">
+					Shipping address is required!
+				</mat-error>
+			</mat-form-field>
+		</div>
+		<div class="col-12">
+			<mat-form-field class="w-100">
+				<input
+					formControlName="comment"
+					matInput
+					name="comment"
+					placeholder="Comment"
+					type="text"
+				/>
+			</mat-form-field>
+		</div>
+	</div>
 
-  <!-- Submit button to allow form submit by Enter -->
-  <button class="d-none"></button>
+	<!-- Submit button to allow form submit by Enter -->
+	<button class="d-none"></button>
 </form>

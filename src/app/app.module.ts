@@ -20,37 +20,37 @@ import { ErrorPrintInterceptor } from './core/interceptors/error-print.intercept
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const interceptors: Provider[] = [
-  {
-    provide: HTTP_INTERCEPTORS,
-    useClass: ErrorPrintInterceptor,
-    multi: true,
-  },
+	{
+		provide: HTTP_INTERCEPTORS,
+		useClass: ErrorPrintInterceptor,
+		multi: true,
+	},
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatTooltipModule,
-    ProductsModule,
-    CartModule,
-    HttpClientModule,
-    MatBadgeModule,
-    MatSnackBarModule,
-  ],
-  providers: [
-    interceptors,
-    {
-      provide: CONFIG_TOKEN,
-      useValue: environment,
-    },
-  ],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent, HeaderComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatToolbarModule,
+		MatButtonModule,
+		MatIconModule,
+		MatMenuModule,
+		MatTooltipModule,
+		ProductsModule,
+		CartModule,
+		HttpClientModule,
+		MatBadgeModule,
+		MatSnackBarModule,
+	],
+	providers: [
+		interceptors,
+		{
+			provide: CONFIG_TOKEN,
+			useValue: environment,
+		},
+	],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

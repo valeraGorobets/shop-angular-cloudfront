@@ -16,22 +16,22 @@ import { ManageProductsService } from './manage-products/manage-products.service
 import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
-  declarations: [
-    OrdersComponent,
-    ManageProductsComponent,
-    EditProductComponent,
-  ],
-  imports: [
-    AdminRoutingModule,
-    CommonModule,
-    FilePickerModule,
-    MatCardModule,
-    MatInputModule,
-    MatTableModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    ReactiveFormsModule,
-  ],
-  providers: [OrdersService, ManageProductsService],
+	declarations: [
+		OrdersComponent,
+		ManageProductsComponent,
+		EditProductComponent,
+	],
+	imports: [
+		AdminRoutingModule,
+		CommonModule,
+		FilePickerModule,
+		MatCardModule,
+		MatInputModule,
+		MatTableModule,
+		MatButtonModule,
+		MatProgressSpinnerModule,
+		ReactiveFormsModule,
+	],
+	providers: [OrdersService, ManageProductsService],
 })
 export class AdminModule {}
