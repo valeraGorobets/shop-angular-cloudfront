@@ -16,7 +16,7 @@ plugins:
 
 custom:
     client:
-        bucketName: shop-second-spa-s3-bucket
+        bucketName: shop-spa-prod-s3-bucket
         distributionFolder: dist/app
 
     ## Serverless-single-page-app-plugin configuration:
@@ -33,7 +33,11 @@ resources:
             Type: AWS::S3::Bucket
             Properties:
                 BucketName: ${self:custom.s3BucketName}
-                AccessControl: PublicRead
+                PublicAccessBlockConfiguration:
+                    BlockPublicAcls: false
+                OwnershipControls:
+                    Rules:
+                        -   ObjectOwnership: ObjectWriter
                 WebsiteConfiguration:
                     IndexDocument: index.html
                     ErrorDocument: index.html
