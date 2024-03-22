@@ -1,4 +1,4 @@
-service: my-serverless-server
+service: shop-angular-cloudfront-server
 frameworkVersion: "3"
 
 provider:
@@ -16,7 +16,7 @@ plugins:
 
 custom:
     client:
-        bucketName: shop-spa-prod-s3-bucket
+        bucketName: shop-angular-cloudfront-prod-s3-bucket
         distributionFolder: dist/app
 
     ## Serverless-single-page-app-plugin configuration:
